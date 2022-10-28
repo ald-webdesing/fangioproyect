@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANGIO - El Rey de la Máxima</title>
+    <link rel="stylesheet" href="stylesbio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Macondo&family=Teko:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2400ba3ce5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <span class="logo">
+            <a href="index.html">
+                <img src="logo-jmf-recortado-final.png" alt="logo">
+            </a>
+        </span>
+        <a href="piloto.html" class="botpiloto"><i class="fa-regular fa-id-card"></i> Piloto</a>
+        <a href="fierros.html" class="botfierros"><i class="fa-solid fa-car"></i> Fierros</a>
+        <a href="bio.html" class="botbio"><i class="fa-solid fa-dna fa-spin"
+                style="--fa-animation-duration: 5s; --fa-animation-iteration-count: 1;"></i>
+            Biografía</a>
+        <a href="contact.html" class="botcontact"><i class="fa-regular fa-address-book"></i> Contacto</a>
+    </header>
+    <div class="body-main">
+        <div class="body-main-img"><iframe width="90%" height="400px" src="https://www.youtube.com/embed/56SNcRlKBxY"
+                title="La historia de JUAN MANUEL FANGIO | " El maestro"" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe><br><br><iframe width="90%" height="400px"
+                src="https://www.youtube.com/embed/epn7rYRZuOY"
+                title="FANGIO cuenta sus “secretos” y anécdotas en la pista" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe></div>
+        <div class="body-main-text">
+            <p class="biotitle"><mark>El ser humano detrás de la leyenda</mark></p>
+            <p class="bioparagraph">Juan Manuel Fangio nace el 23 de junio de 1911, en la ciudad de Balcarce, Provincia
+                de Buenos Aires. Sin embargo, el Registro Civil lo anota con fecha 24 de junio.</p>
+            <p class="bioparagraph">En su niñez abandonó sus estudios para dedicarse a la mecánica automovilística y
+                participar en competiciones no oficiales. En 1938 debutó en Turismo Carretera y compitió a bordo de un
+                Ford V8. En 1940 pasó a competir con Chevrolet, con el cual obtuvo el Gran Premio Internacional del
+                Norte y se consagró como Campeón Argentino de Turismo Carretera, título que repitió al año siguiente.
+                Luego compitió en las categorías de Fuerza Libre (antecesoras de la Fórmula 1 Mecánica Argentina) donde
+                ganó en cuatro ocasiones, desde 1947 a 1949 con un Volpi-Chevrolet y en 1950 con un Talbot.</p>
+            <p class="bioparagraph">En 1947, con la colaboración del gobierno argentino, comenzó a participar en los
+                Grandes Premios del continente europeo. Desde 1947 a 1958, compitió en Grandes Premios de manera oficial
+                para las marcas Mercedes, Maserati, Alfa Romeo y Ferrari obteniendo cinco títulos mundiales y dos
+                subcampeonatos.</p>
+            <p class="bioparagraph">Fangio obtuvo 24 victorias, 35 podios, 29 pole positions y 23 vueltas rápidas en 51
+                Grandes Premios. Mantuvo durante un extenso período el récord de más títulos en Fórmula 1 hasta que fue
+                desplazado por Michael Schumacher en 2003. Sin embargo, se mantiene como el piloto de mejor promedio de
+                victorias, el único piloto que ganó campeonatos de Fórmula 1 con cuatro escuderías distintas y el piloto
+                campeón más longevo de la historia (46 años y 41 días). Víctima de un grave accidente en Monza en 1952,
+                estuvo dos temporadas alejado de los autódromos; una vez recuperado, se proclamó campeón del mundo en
+                1954 (Maserati y Mercedes), 1955 (Mercedes), 1956 (Lancia-Ferrari). Por otra parte, triunfó en las 12
+                Horas de Sebring de 1956 y 1957 con Ferrari y Maserati respectivamente. Luego de un secuestro en Cuba en
+                1958, obtuvo su última victoria en febrero de ese mismo año en el Gran Premio de Argentina, a los 46
+                años de edad, y se retiró de la competición unos meses después.</p>
+            <p class="bioparagraph">Desde 1974, fue presidente del directorio de Mercedes-Benz Argentina, y tras su
+                retiro fue designado presidente honorario de Mercedes-Benz en Argentina desde 1987, e inauguró un museo
+                en su ciudad natal. En 2011, en el centenario de su nacimiento, se realizaron variadas actividades con
+                motivo de su nacimiento.</p>
+            <p class="bioparagraph">Falleció a los 84 años en la ciudad de Buenos Aires, donde residía, el 17 de julio
+                de 1995.</p>
+        </div>
+    </div>
+    <div class="container">
+        <p>Si llegaste hasta acá, es porque querías conocer más a fondo a la gran leyenda de la Fórmula 1. Si querés
+            saber quiénes fueron los restantes campeones de la máxima, presioná el botón que está debajo y andá
+            conociéndolos de uno en uno.</p>
+
+    </div>
+
+    <div id="contenido">
+        <!-- Aquí insertaremos contenido que recuperamos
+        mediante la API -->
+    </div>
+
+
+    <!-- Nuestro script ------------------------------>
+    <script>
+
+        // Esta función lee los datos remotos, usando fetch
+        function traerDatosAPI() {
+            fetch('https://randomuser.me/api/?gender=male') // API a leer
+                // Cuando ha finalizado la lectura
+                // guardo en datos el texto leido:
+                .then(datos => datos.json()) //res va a guardar el dato mediante el método .json()
+                .then(datos => {
+                    // Y luego copio ese texto en #contenido.
+                    contenido.innerHTML +=
+                        `<div class="tarjeta">
+                         <img src = "${datos.results[0].picture.large}"</img><br>
+                         Nombre: ${datos.results[0].name.first} ${datos.results[0].name.last}<br>
+                         Nacionalidad: ${datos.results[0].location.country}<br>
+                         </div>`
+                })
+        }
+    </script>
+    <div class="divboton">
+        <button class="boton" onclick="traerDatosAPI()">dame un campeón</button>
+    </div>
+    <footer class="footer">
+        <p class="frase">“Siempre hay que tratar de ser el mejor, pero nunca creerse el mejor”</p>
+        <p>Hecho orgullosamente en Argentina por ald-webdesign</p>
+    </footer>
+</body>
+
+</html>

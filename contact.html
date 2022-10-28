@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FANGIO - El Rey de la Máxima</title>
+    <link rel="stylesheet" href="pruebaform-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Macondo&family=Teko:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2400ba3ce5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <span class="logo">
+            <a href="index.html">
+                <img src="logo-jmf-recortado-final.png" alt="logo">
+            </a>
+        </span>
+        <a href="piloto.html" class="botpiloto"><i class="fa-regular fa-id-card"></i> Piloto</a>
+        <a href="fierros.html" class="botfierros"><i class="fa-solid fa-car"></i> Fierros</a>
+        <a href="bio.html" class="botbio"><i class="fa-solid fa-dna"></i> Biografía</a>
+        <a href="contact.html" class="botcontact"><i class="fa-regular fa-address-book fa-spin"
+                style="--fa-animation-duration: 5s; --fa-animation-iteration-count: 1;"></i> Contacto</a>
+    </header>
+    <div class="body-main">
+        <article><mark>¡Contactanos!</mark><br>Somos un pequeño grupo de entusiastas de los fierros, amantes de la
+            Fórmula 1
+            y fanáticos de Juan
+            Manuel
+            Fangio, y nos encantaría saber tu opinión sobre el sitio y leer cualquier comentario, reseña o crítica
+            (ojalá
+            que no) que quisieras hacernos. Con ese fin te dejamos un formulario de contacto donde podrás expresar lo
+            que
+            quieras. Intentaremos responderte a 300 km/h! <i
+                class="fa-regular fa-face-grin-squint-tears"></i><br><br>Gracias por pasarte por nuestro
+            sitio!<br><br>Esperamos verte por aquí pronto! <i class="fa-regular fa-face-smile"></i><br><br>El equipo de
+            ald-webdesign</article>
+        <form action="" name="formulario" method="get">
+            <table>
+                <tr>
+                    <td align="right"><label for="">Tu nombre: </label></td>
+                    <td align="left"><input type="text" size="30" name="nombre" id="nombre" placeholder="Nombre"><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="right"><label for="">En qué año naciste? </label></td>
+                    <td class="box" align="left"><input type="number" size="5" maxlength="4" minlength="4" name="born"
+                            id="born"><br></td>
+                </tr>
+
+                <tr>
+                    <td align="right"><label for="mail">Tu correo electrónico: </label></td>
+                    <td class="box" align="left"><input type="email" size="30" name="mail" id="mail"
+                            placeholder="ejemplo@mimail.com" required><br></td>
+                </tr>
+
+                <tr>
+                    <td align="right"><label for="knowledge">Cómo nos conociste? </label></td>
+                    <td class="box" align="left">
+                        <select name="know" id="know">
+                            <option value="index">Elegí una opción</option>
+                            <option value="web">Navegando por la web</option>
+                            <option value="rss">Redes Sociales</option>
+                            <option value="amigo">Por amigos</option>
+                            <option value="other">Otros</option>
+                        </select>
+                    </td><br>
+                </tr>
+
+                <tr>
+                    <td align="right"><label for="comentario">Dejanos tus comentarios</label><br></td>
+                    <td class="box" align="left"><textarea name="comentario" id="comentario" cols="50" rows="10"
+                            placeholder="Escribinos lo que quieras"></textarea><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <!-- Al presionar el botón, se llama a la función de validacion -->
+                        <input class="submit" type="submit" id="b1" name="btn" value="Enviar">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        var formulario = document.getElementsByName('formulario')[0],   //[0] Primer elemento, el formulario en si mismo.
+            elementos = formulario.elements,                            // Elementos del form, no lo usamos en este script.
+            boton = document.getElementById('b1')                       // El botón
+
+
+        // --------------------------------------------------------
+        // Validamos Nombre
+        // --------------------------------------------------------
+        var validarNombre = function (e) {
+            if (formulario.nombre.value == 0) {      // Si el campo id="nombre" del form está vacio...
+                alert("Completa el campo nombre");
+                e.preventDefault();                 // Evita elcomportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+
+            }
+        };
+
+        var validarBorn = function (e) {
+            if (formulario.born.value.length < 4) {      // Si el campo id="born" del form está vacio...
+                alert("Completa el campo año de nacimiento");
+                e.preventDefault();                 // Evita elcomportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+
+            }
+        };
+
+        var validarMail = function (e) {
+            if (formulario.mail.value == 0) {      // Si el campo id="mail" del form está vacio...
+                alert("Completa el campo correo electrónico");
+                e.preventDefault();                 // Evita elcomportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+
+            }
+        };
+
+        var validarKnow = function (e) {
+            if (formulario.know.selectedIndex == 0) {      // Si el campo id="know" del form está vacio...
+                alert("Elige una opción de la lista así sabemos cómo nos conociste");
+                e.preventDefault();                 // Evita elcomportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+
+            }
+            else {
+                alert("Gracias por contactarnos!");
+            }
+        };
+
+
+        // --------------------------------------------------------
+        // Se ejecuta al presionar submit e invoca a las cuatro validaciones
+        // --------------------------------------------------------
+        var validar = function (e) {  // "e" es el evento recibido del form (https://developer.mozilla.org/es/docs/Web/API/Event/preventDefault)
+            validarNombre(e);
+            validarBorn(e);
+            validarMail(e);
+            validarKnow(e);
+
+        };
+
+        // --------------------------------------------------------
+        // Espera que se presione "enviar" y llama a "validar"
+        // submit es un evento DEL FORM, no del botón!
+        formulario.addEventListener("submit", validar);
+    </script>
+    <footer class="footer">
+        <p class="frase">“Siempre hay que tratar de ser el mejor, pero nunca creerse el mejor”</p>
+        <p>Hecho orgullosamente en Argentina por ald-webdesign</p>
+    </footer>
+</body>
+
+</html>
